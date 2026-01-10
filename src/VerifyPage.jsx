@@ -12,6 +12,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+const API_BASE = import.meta.env.VITE_API_BASE;
+
 function VerifyPage() {
   const [amount, setAmount] = useState("");
   const { code } = useParams();
@@ -22,9 +24,7 @@ function VerifyPage() {
   useEffect(() => {
     const fetchBusiness = async () => {
       try {
-        const res = await axios.get(
-          `http://${window.location.hostname}:5000/api/businesses/${code}`
-        );
+        const res = await axios.get(`${API_BASE}/api/businesses/${code}`);
         setBusiness(res.data);
       } catch (err) {
         console.error("Business not found");
