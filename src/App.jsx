@@ -125,7 +125,7 @@ const Dashboard = () => {
                 {/* The "Physical" Card look for the QR */}
                 <div className="bg-white p-6 rounded-3xl inline-block shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-8 border-slate-100">
                   <QRCode
-                    value={`${window.location.origin}/verify/${result.verificationCode}`}
+                    value={`https://payment-verify-frontend.vercel.app/verify/${result.verificationCode}`}
                     size={200}
                     level="H"
                   />
