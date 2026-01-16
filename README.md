@@ -1,61 +1,54 @@
-# 🚀 EthioVerifyPay - Backend API
+# 📱 EthioVerifyPay - Frontend (Fintech UI)
 
-This is the robust Node.js/Express backend for **EthioVerifyPay**, a fintech solution designed to eliminate payment fraud and manual entry errors in the Ethiopian merchant ecosystem.
+EthioVerifyPay is a high-performance, mobile-first web application designed for the Ethiopian market. It allows merchants to generate "Verified" QR codes that customers can scan to pay accurately via Telebirr or CBE.
 
-## 🌍 The Problem
-In Ethiopia, merchants often fall victim to fake payment screenshots (Telebirr/CBE). Additionally, customers frequently send money to the wrong account numbers due to manual typing errors.
+**🔗 Live Demo:** [Your Vercel Link Here]
 
-## ✨ The Solution
-EthioVerifyPay provides a secure verification layer. This API manages merchant authentication, stores account details securely, and generates unique verification codes used to build deep-linked USSD payment strings.
+## 🎯 Key Goals
+- **Eliminate Fraud:** Customers see a "Verified" badge and the merchant's real name before paying.
+- **Zero Typos:** The app generates the exact USSD string (e.g., `× 127 ×1*...#`) for Telebirr, opening the phone's dialer automatically.
+- **3G/4G Optimized:** Lightweight architecture for fast loading on Ethiopian mobile networks.
+
+## 🎨 Design System
+- **Theme:** "Neon-Noir" (Deep Navy & Electric Cyan) for high contrast and modern fintech feel.
+- **UX:** Built with Framer Motion for smooth transitions and Lucide-React for tiny, fast-loading icons.
+- **Printable:** Includes a "Flyer Mode" for merchants to print physical QR codes for their shops.
 
 ## 🛠 Tech Stack
-- **Runtime:** Node.js
-- **Framework:** Express.js
-- **Database:** MongoDB Atlas (Mongoose ODM)
-- **Deployment:** Render
-
-## 🚀 Key Features
-- **Merchant Auth:** Secure Registration and Login system.
-- **Dynamic Verification:** Generates unique codes for every merchant to prevent URL spoofing.
-- **CORS Configured:** Securely communicates with the React frontend.
-- **Production Ready:** Optimized for deployment on Render with auto-sleep handling.
+- **Framework:** React (Vite)
+- **Styling:** Tailwind CSS 4.0
+- **Animations:** Framer Motion
+- **Deployment:** Vercel (Configured with `vercel.json` for SPA routing)
 
 ## ⚙️ Installation & Setup
 
 1. **Clone the repo:**
 bash
-  git clone https://github.com/YOUR_USERNAME/ethio-verify-backend.git
-  cd ethio-verify-backend
+  git clone https://github.com/YOUR_USERNAME/ethio-verify-frontend.git
+  cd ethio-verify-frontend
 ```
 
 2. Install dependencies:
   
 ```
-
 bash
   npm install
-
-```
-
-3. Environment Variables:
-  Create a .env file in the root and add:
-  
-```
-env
-  MONGODB_URI=your_mongodb_connection_string
-  PORT=5000
-
   ```
 
-4. Run the server:
+3. Update API Endpoint:
+  In src/App.jsx and src/VerifyPage.jsx, update the axios base URL to your live Backend URL.
+4. Run development server:
   
 ```
 bash
-  node index.js
-
+  npm run dev
   ```
 
+ 🧩 Challenges Overcome
+- SPA Routing: Solved the Vercel 404 error on page refresh by implementing a custom vercel.json rewrite rule.
+- USSD Integration: Implemented URL encoding for # (%23) to ensure USSD strings dial correctly on mobile devices.
+
  🔗 Related Repositories
-- Frontend Repository (https://github.com/YOUR_USERNAME/ethio-verify-frontend)
+- Backend Repository (https://github.com/YOUR_USERNAME/ethio-verify-backend)
 
 ```
