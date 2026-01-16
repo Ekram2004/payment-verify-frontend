@@ -1,16 +1,61 @@
-# React + Vite
+# 🚀 EthioVerifyPay - Backend API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the robust Node.js/Express backend for **EthioVerifyPay**, a fintech solution designed to eliminate payment fraud and manual entry errors in the Ethiopian merchant ecosystem.
 
-Currently, two official plugins are available:
+## 🌍 The Problem
+In Ethiopia, merchants often fall victim to fake payment screenshots (Telebirr/CBE). Additionally, customers frequently send money to the wrong account numbers due to manual typing errors.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ The Solution
+EthioVerifyPay provides a secure verification layer. This API manages merchant authentication, stores account details securely, and generates unique verification codes used to build deep-linked USSD payment strings.
 
-## React Compiler
+## 🛠 Tech Stack
+- **Runtime:** Node.js
+- **Framework:** Express.js
+- **Database:** MongoDB Atlas (Mongoose ODM)
+- **Deployment:** Render
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Key Features
+- **Merchant Auth:** Secure Registration and Login system.
+- **Dynamic Verification:** Generates unique codes for every merchant to prevent URL spoofing.
+- **CORS Configured:** Securely communicates with the React frontend.
+- **Production Ready:** Optimized for deployment on Render with auto-sleep handling.
 
-## Expanding the ESLint configuration
+## ⚙️ Installation & Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repo:**
+bash
+  git clone https://github.com/YOUR_USERNAME/ethio-verify-backend.git
+  cd ethio-verify-backend
+```
+
+2. Install dependencies:
+  
+```
+
+bash
+  npm install
+
+```
+
+3. Environment Variables:
+  Create a .env file in the root and add:
+  
+```
+env
+  MONGODB_URI=your_mongodb_connection_string
+  PORT=5000
+
+  ```
+
+4. Run the server:
+  
+```
+bash
+  node index.js
+
+  ```
+
+ 🔗 Related Repositories
+- Frontend Repository (https://github.com/YOUR_USERNAME/ethio-verify-frontend)
+
+```
