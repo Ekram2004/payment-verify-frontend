@@ -7,10 +7,8 @@ EthioVerifyPay is a high-performance, mobile-first web application designed for 
 ## 🎯 Key Goals
 - **Eliminate Fraud:** Customers see a "Verified" badge and the merchant's real name before paying.
 - **Zero Typos:** The app generates the exact USSD string (e.g., `× 127 ×1*...#`) for Telebirr, opening the phone's dialer automatically.
-- **3G/4G Optimized:** Lightweight architecture for fast loading on Ethiopian mobile networks.
 
 ## 🎨 Design System
-- **Theme:** "Neon-Noir" (Deep Navy & Electric Cyan) for high contrast and modern fintech feel.
 - **UX:** Built with Framer Motion for smooth transitions and Lucide-React for tiny, fast-loading icons.
 - **Printable:** Includes a "Flyer Mode" for merchants to print physical QR codes for their shops.
 
@@ -24,8 +22,8 @@ EthioVerifyPay is a high-performance, mobile-first web application designed for 
 
 1. **Clone the repo:**
 bash
-  git clone https://github.com/YOUR_USERNAME/ethio-verify-frontend.git
-  cd ethio-verify-frontend
+  git clone https://github.com/Ekram2004/payment-verify-frontend
+  cd payment-verify-frontend
 ```
 
 2. Install dependencies:
@@ -49,6 +47,6 @@ bash
 - USSD Integration: Implemented URL encoding for # (%23) to ensure USSD strings dial correctly on mobile devices.
 
  🔗 Related Repositories
-- Backend Repository (https://github.com/YOUR_USERNAME/ethio-verify-backend)
+- Backend Repository (https://github.com/Ekram2004/payment-verify-backend)
 
 ```
