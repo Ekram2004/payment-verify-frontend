@@ -1,4 +1,4 @@
-# 📱 EthioVerifyPay - Frontend (Fintech UI)
+# 📱 payment-verification - Frontend (Fintech UI)
 
 EthioVerifyPay is a high-performance, mobile-first web application designed for the Ethiopian market. It allows merchants to generate "Verified" QR codes that customers can scan to pay accurately via Telebirr or CBE.
 
